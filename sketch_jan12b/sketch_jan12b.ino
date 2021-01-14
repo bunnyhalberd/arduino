@@ -3,36 +3,36 @@ int switchState = 0;
 
 int greenState = HIGH;
 
-void setup() {
+void setup()
+{
 
   pinMode(2, INPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
-
 }
-
 
 void setAll(int state)
 {
-  for(int n = 3; n < 6; n++)
+  for (int n = 3; n < 6; n++)
   {
     digitalWrite(n, state);
   }
 }
 
-void loop() {
+void loop()
+{
 
- switchState = digitalRead(2);
+  switchState = digitalRead(2);
 
- if (switchState == LOW)
- {
+  if (switchState == LOW)
+  {
     digitalWrite(3, greenState);
     digitalWrite(4, LOW);
     digitalWrite(5, LOW);
 
     // Set up the green for the next frame
-    if(greenState == LOW)
+    if (greenState == LOW)
     {
       greenState = HIGH;
     }
@@ -41,11 +41,10 @@ void loop() {
       greenState = LOW;
     }
 
-    delay(200);
-    
- }
- else
- {
+    delay(125);
+  }
+  else
+  {
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
     digitalWrite(5, HIGH);
@@ -63,23 +62,20 @@ void loop() {
     delay(500);
 
     int delayTime = 500;
-    for( int count = 0; count < 15; count++)
+    for (int count = 0; count < 20; count++)
     {
       setAll(LOW);
       delay(delayTime);
       setAll(HIGH);
       delay(delayTime);
 
-      delayTime = delayTime / 1.3;
+      delayTime = delayTime / 1.14;
     }
 
     setAll(HIGH);
-    delay(1000);
+    delay(1500);
 
     setAll(LOW);
-    delay(2000);
-
-    
- }
-
+    delay(3000);
+  }
 }
