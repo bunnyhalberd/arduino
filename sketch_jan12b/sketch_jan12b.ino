@@ -41,7 +41,7 @@ void loop() {
       greenState = LOW;
     }
 
-    delay(150);
+    delay(125);
     
  }
  else
