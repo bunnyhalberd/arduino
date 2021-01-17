@@ -2,5 +2,5 @@
     "board": "arduino:avr:uno",
     "port": "COM3",
     "programmer": "AVR ISP",
-    "sketch": "project_04/project_04.ino"
+    "sketch": "project_05/project_05.ino"
 }
