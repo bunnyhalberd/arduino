@@ -69,12 +69,15 @@ void loop()
 {
     sensorVal = analogRead(sensorPin);
     int angle = map(sensorVal, sensorLow, sensorHigh, 0, 179);
-    Serial.print("read value: ");
-    Serial.print(sensorVal);
-    Serial.print(", mapped to angle: ");
-    Serial.println(angle);
+    //Serial.print("read value: ");
+    //Serial.print(sensorVal);
+    //Serial.print(", mapped to angle: ");
+    //Serial.println(angle);
 
     myServo.write(angle);
+
+    // Drop the angle to the serial port so the PC can get it
+    Serial.println(angle);
 
     delay(100);
 
