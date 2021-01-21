@@ -4,6 +4,8 @@
 #include <SD.h>
 File myFile;
 
+#define FILE_NAME "smoothed.aaw"
+
 bool test_file(File *file)
 {
     // Make sure the first five bytes are our magic number
@@ -34,10 +36,10 @@ void setup()
     }
     Serial.println("initialization done.");
     // open the file for reading:
-    myFile = SD.open("sample.bin");
+    myFile = SD.open(FILE_NAME);
     if (myFile)
     {
-        Serial.println("sample.bin:");
+        Serial.println(FILE_NAME);
 
         //test_file(&myFile);
 
@@ -59,7 +61,7 @@ void setup()
     else
     {
         // if the file didn't open, print an error:
-        Serial.println("error opening sample.bin");
+        Serial.println("error opening FILE_NAME");
     }
 }
 void loop()
