@@ -2,5 +2,5 @@
     "board": "arduino:avr:uno",
     "port": "COM3",
     "programmer": "AVR ISP",
-    "sketch": "eeprom_programmer/eeprom_programmer.ino"
+    "sketch": "card_read_test/card_read_test.ino"
 }
