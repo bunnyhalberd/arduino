@@ -129,9 +129,9 @@ void setup()
         delay(header.time_per_frame);
       }
 
-      if(currentFrame % 10 == 0)
+      if (currentFrame % 10 == 0)
       {
-        Serial.print("frame "); 
+        Serial.print("frame ");
         Serial.println(currentFrame);
       }
 
