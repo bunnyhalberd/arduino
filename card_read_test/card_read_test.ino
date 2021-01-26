@@ -4,7 +4,7 @@
 #include <SD.h>
 File myFile;
 
-#define FILE_NAME "smoothed.aaw"
+#define FILE_NAME "two_servos.aaw"
 
 bool test_file(File *file)
 {
